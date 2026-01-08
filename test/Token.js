@@ -1,7 +1,7 @@
 const {expect} = require("chai");
 // const {ethers} = require("ethers");
 const { ethers } = require("hardhat");
-const {isCallTrace} = require("hardhat/internal/hardhat-network/stack-traces/message-trace");
+// const {isCallTrace} = require("hardhat/internal/hardhat-network/stack-traces/message-trace");
 
 describe("Token Contract",function(){
   it("Deploymenrt should assign the total value to the balance of owner",async function() {

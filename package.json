@@ -9,11 +9,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/node": "^22.19.3",
     "hardhat": "^2.22.17",
     "typescript": "~5.8.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
