@@ -24,10 +24,8 @@ contract Token {
     function balancecheck(address account) public view returns (uint) {
         return balance[account];
     }
-// trying ki ho raha hai ki nahi
 
 
-
-
+    
 
 }
