@@ -24,8 +24,5 @@ contract Token {
     function balancecheck(address account) public view returns (uint) {
         return balance[account];
     }
-
-
     
-
 }
