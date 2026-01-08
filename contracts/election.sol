@@ -15,7 +15,7 @@ contract election{
 
     function voting(party _party) external{
 
-        require(!hasvoted[msg.sender],"Aapne phele vote de chuka hai");
+        require(!hasvoted[msg.sender],"already voted");
 
         if(_party ==party.bjp){
             bjpcount++;

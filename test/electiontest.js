@@ -23,5 +23,19 @@ describe("Election contract",async function(){
     it("bjp getting vote when pressed bjp", async function(){
         await election.voting(0);
         expect(await election.bjpcount()).to.equal(1);
+        expect(await election.congresscount()).to.equal(0);
     });
+
+    it("congress getting vote when pressed congress",async function(){
+        await election.voting(1);
+        expect(await election.bjpcount()).to.equal(0);
+        expect(await election.congresscount()).to.equal(1);
+    })
+
+    it("one person cant vote twice", async function(){
+        await election.connect(voter1).voting(0);
+        await expect( election.connect(voter1).voting(0)).to.be.revertedWith("already voted");
+        await expect( election.connect(voter1).voting(1)).to.be.revertedWith("already voted");
+    })
+
 });
