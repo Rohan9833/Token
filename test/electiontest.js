@@ -18,7 +18,5 @@ describe("Election contract",async function(){
         expect(await election.hasvoted(owner.address)).to.equal(false);  
         await election.connect(owner).voting(1);
         expect(await election.hasvoted(owner.address)).to.equal(true);
-        
-
     });
 });
