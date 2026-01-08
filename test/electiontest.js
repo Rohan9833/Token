@@ -19,4 +19,9 @@ describe("Election contract",async function(){
         await election.connect(owner).voting(1);
         expect(await election.hasvoted(owner.address)).to.equal(true);
     });
+
+    it("bjp getting vote when pressed bjp", async function(){
+        await election.voting(0);
+        expect(await election.bjpcount()).to.equal(1);
+    });
 });
