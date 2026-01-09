@@ -32,26 +32,3 @@ contract election{
 
 }
 
-
-// pragma solidity ^ 0.8.18;
-
-// contract Voting_Booth{
-
-//  uint public count;
-//  uint public count2;
-
-// mapping(address => bool) internal voted;
-
-// function Modi() public{
-//     require(!voted[msg.sender],"Already Voted!");
-//     voted[msg.sender] = true;
-//     count += 1;
-// }
-
-// function Rahul() public{
-// require(!voted[msg.sender],"Already Voted!");
-//     voted[msg.sender] = true;
-//     count2 += 1;}
-
-
-// }
