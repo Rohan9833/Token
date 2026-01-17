@@ -23,8 +23,22 @@ describe("Publicfunding contract", async function(){
              expect(pf.donate({value:ethers.parseEther("1")})).to.not.be.revertedWith("donation unscuessfull");
         });
 
-        it("allowed multiple donations",async function(){
-            pf.donate({value:ethers.parseEther("1")});
-        })
+        it("allowed multiple donations by same user",async function(){
+            expect(
+                pf.connect(donor1).donate({value:ethers.parseEther("1")}),
+                pf.connect(donor1).donate({value:ethers.parseEther("2")}),
+                pf.connect(donor1).donate({value:ethers.parseEther("3")}),
+                pf.connect(donor1).donate({value:ethers.parseEther("1")})
+            ).to.not.be.revertedWith("can't do multiple donations"); 
+        });
+
+        it("allowed multiple donations by multiple user",async function(){
+            expect(
+                pf.connect(donor1).donate({value:ethers.parseEther("1")}),
+                pf.connect(donor2).donate({value:ethers.parseEther("2")}),
+                pf.connect(donor3).donate({value:ethers.parseEther("3")}),
+                pf.connect(donor4).donate({value:ethers.parseEther("1")})
+            ).to.not.be.revertedWith("can't do multiple donations"); 
+        });
     });
 });
