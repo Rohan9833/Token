@@ -24,6 +24,4 @@ contract Publicfunding {
         require(msg.sender==owner,"You are not the owner");
         //  owner.transfer(address(this) ether)
     }
-
-
 }
