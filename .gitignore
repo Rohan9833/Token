@@ -20,3 +20,6 @@
 /coverage
 
 .env
+
+
+./react-app/node_modules
