@@ -6,12 +6,19 @@ contract Token {
     string public symbol = "roh";
     uint public totalSupply = 100;
     address public owner;
+    int public total;
 
     mapping(address => uint) private balance;
 
     constructor() {
         balance[msg.sender] = totalSupply;
         owner = msg.sender;
+    }
+    
+    function add(int a, int b) public returns(int){
+        total = a + b;
+        return total;
+
     }
 
     function transfer(address receiver, uint amount) external {

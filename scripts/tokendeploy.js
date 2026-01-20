@@ -9,7 +9,7 @@ async function  main (){
     tokenkaaddress = await token.getAddress();
     const txHash = token.deploymentTransaction().hash;
     console.log("Transaction Hash:", txHash);
-    console.log("token deployed",tokenkaaddress);
+    console.log(" contract address:",tokenkaaddress);
 }
 
 main()
