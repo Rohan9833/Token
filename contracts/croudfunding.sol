@@ -17,7 +17,6 @@ function deposit() public payable {
 
     deposits[msg.sender] += msg.value;
     Total_ETH += msg.value;
-
 }
 
 function withdraw() public {

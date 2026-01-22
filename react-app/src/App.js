@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 const {ethers} = require("ethers");
 // require('dotenv').config();
 const artifact = require("./artifacts/contracts/Token.sol/Token.json");
@@ -7,18 +6,6 @@ const Contractaddress="0xb461fb82067eC8faa4AcC03CdaC2B0608ddd3f8e";
 const abi = artifact.abi;
 
 function App() {
-  
-  // useEffect(()=>{
-  //   const writecontract = async()=>{
-  //     const provider = new ethers.BrowserProvider.Web3Provider(window.etherum);
-  //     await provider.send("eth_requestAccounts",[]);
-  //     const signers = provider.getSigners();
-  //     const contract = new ethers.Contract(Contractaddress,abi,signers);
-  //     await contract.add(5,5);
-
-  //   };
-  //   writecontract();
-  // },[]);
 
   const writecontract = async()=>{
 

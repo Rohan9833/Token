@@ -4,7 +4,7 @@ pragma solidity 0.8.28;
 interface ICounter {
     function Count() external view returns (uint256);
  
-    function Increment(int a, int b) external;
+    function Increment() external;
 }
  
 abstract contract firstabstact {
@@ -18,14 +18,12 @@ abstract contract firstabstact {
  
 }
  
- 
- 
 contract Testing is firstabstact, ICounter{
     uint256 public counting;
     function Count() external view override returns (uint256){
         return counting;
     }
-    function Increment(int a, int b) external override{
+    function Increment() external override{
         counting = counting + 1;
     }
  
@@ -33,7 +31,7 @@ contract Testing is firstabstact, ICounter{
         return 10;
 }
  
-function increment() public override returns(address){
+function increment() public view override returns(address){
     return msg.sender;
 }
 }
