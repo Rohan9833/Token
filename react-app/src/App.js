@@ -5,7 +5,7 @@ const artifact = require("./artifacts/contracts/Token.sol/Token.json");
 const Contractaddress="0xb461fb82067eC8faa4AcC03CdaC2B0608ddd3f8e";
 const abi = artifact.abi;
 
-function App() {
+function App() {  
   const [contract,setContract] = useState(null);
   const [reciver ,setReciver] = useState("");
   const [amount ,setAmount]= useState("");
