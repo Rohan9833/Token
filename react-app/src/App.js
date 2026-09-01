@@ -163,7 +163,7 @@ function App() {
 
         {/* Footer Detail */}
         <div style={{ marginTop: '25px', textAlign: 'center', opacity: '0.5' }}>
-          <p style={{ fontSize: '11px' }}>Connected to Ethereum Mainnet</p>
+          <p style={{ fontSize: '11px' }}>You are now Connected to Ethereum Mainnet</p>
         </div>
       </div>
     </div>
